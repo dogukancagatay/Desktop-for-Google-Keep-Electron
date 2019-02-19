@@ -1,14 +1,14 @@
 {
   "name": "google-keep-desktop",
   "version": "0.2.0",
-  "productName": "Google Keep Desktop",
+  "productName": "Google Keep",
   "description": "A minimal Google Keep Desktop Client App Packaged with Electron",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build:darwin": "electron-packager . --out=packages --ignore='^/packages$' --prune --asar --platform=darwin --arch=all --version=$npm_package_electronVersion --icon=assets/icon.icns",
-    "build:linux": "electron-packager . --out=packages --ignore='^/packages$' --prune --asar --platform=linux --arch=all --version=$npm_package_electronVersion --icon=assets/icon.png",
-    "build:windows": "electron-packager . --out=packages --ignore='^/packages$' --prune --asar --platform=win32 --arch=all --version=$npm_package_electronVersion --iconURL=https://github.com/chriskol/Desktop-for-Google-Keep/blob/master/assets/icon.ico"
+    "build:darwin": "electron-packager . --out=packages --ignore='^/packages$' --prune --asar --platform=darwin --arch=all --overwrite --icon=assets/icon.icns",
+    "build:linux": "electron-packager . --out=packages --ignore='^/packages$' --prune --asar --platform=linux --arch=all --overwrite --icon=assets/icon.png",
+    "build:windows": "electron-packager . --out=packages --ignore='^/packages$' --prune --asar --platform=win32 --arch=all --overwrite --icon=assets/icon.ico"
   },
   "repository": {
     "type": "git",
@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/chriskol/desktop-for-google-keep/#readme",
   "devDependencies": {
-    "electron-packager": "^7.1.0",
-    "electron-prebuilt": "^1.2.0"
+    "electron-packager": "^13.0.1",
+    "electron": "^4.0.5"
   }
 }
